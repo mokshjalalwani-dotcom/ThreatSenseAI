@@ -18,3 +18,4 @@ services:
       # If you want to enable live URLhaus lookups:
       - key: INTEL_OFFLINE
         value: "false"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
