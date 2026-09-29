@@ -42,22 +42,22 @@ router = APIRouter()
 logger = logging.getLogger(__name__)
 
 _aggregator = RiskAggregator()
-_explainer = Explainer()
+_explainer  = Explainer()
 
 # ── Normalizer dispatch ───────────────────────────────────────────────────────
 
 _TEXT_NORMALIZERS: dict[ArtifactType, object] = {
-    ArtifactType.URL: URLNormalizer(),
+    ArtifactType.URL:   URLNormalizer(),
     ArtifactType.EMAIL: EmailNormalizer(),
-    ArtifactType.SMS: SMSNormalizer(),
+    ArtifactType.SMS:   SMSNormalizer(),
 }
 
 _BINARY_NORMALIZERS: dict[ArtifactType, object] = {
-    ArtifactType.IMAGE: ImageNormalizer(),
-    ArtifactType.QR: QRNormalizer(),
-    ArtifactType.FILE: FileNormalizer(),
+    ArtifactType.IMAGE:   ImageNormalizer(),
+    ArtifactType.QR:      QRNormalizer(),
+    ArtifactType.FILE:    FileNormalizer(),
     ArtifactType.WEBPAGE: WebpageNormalizer(),
-    ArtifactType.EMAIL: EmailNormalizer(),
+    ArtifactType.EMAIL:   EmailNormalizer(),
 }
 
 
@@ -70,10 +70,7 @@ def _normalize_artifact(
     metadata: dict | None = None,
 ) -> Artifact:
     """Dispatch to the correct normalizer based on artifact_type."""
-    kwargs = {
-        "filename": filename,
-        "mime_type": mime_type,
-    }
+    kwargs = {"filename": filename, "mime_type": mime_type}
 
     if raw_bytes is not None:
         normalizer = _BINARY_NORMALIZERS.get(artifact_type)
@@ -92,18 +89,23 @@ def _normalize_artifact(
         else:
             artifact = Artifact(type=artifact_type, raw_content=raw_content)
 
-    # Merge caller-supplied metadata (non-destructive)
     if metadata:
         artifact.metadata = {**artifact.metadata, **metadata}
 
     return artifact
 
 
-# ── Pipeline helper ───────────────────────────────────────────────────────────
+# ── Pipeline ──────────────────────────────────────────────────────────────────
 
 
 async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
     """Run the full analysis pipeline for *artifact* and persist to DB."""
+    from app.engines.email.engine import EmailEngine
+    from app.engines.intel.engine import IntelEngine
+    from app.engines.media.engine import MediaEngine
+    from app.engines.url.engine import URLEngine
+    from app.engines.web.engine import WebEngine
+
     analysis_row = Analysis(
         id=str(uuid.uuid4()),
         artifact_id=artifact.id,
@@ -119,15 +121,25 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
     skipped: list[str] = []
 
     try:
-        # NLP engine (with finetuned-backend fallback)
+        # ── Engine initialisation ─────────────────────────────────────────────
         try:
             nlp_engine = build_nlp_engine(settings.NLP_BACKEND.value)
-        except NotImplementedError as exc:
+        except (NotImplementedError, ValueError) as exc:
             errors.append(str(exc))
             nlp_engine = build_nlp_engine("rules")
-            skipped.append("nlp_finetuned_backend")
+            skipped.append("nlp_requested_backend")
 
-        ctx = AnalysisContext(artifact=artifact, nlp_engine=nlp_engine)
+        ctx = AnalysisContext(
+            artifact=artifact,
+            nlp_engine=nlp_engine,
+            url_engine=URLEngine(),
+            web_engine=WebEngine(),
+            email_engine=EmailEngine(),
+            media_engine=MediaEngine(),
+            intel_provider=IntelEngine(),
+        )
+
+        # ── Detector loop ─────────────────────────────────────────────────────
         detection_results: list[DetectionResult] = []
 
         for detector in get_all_detectors():
@@ -153,6 +165,7 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
                 errors.append(f"{detector.detector_id}: {exc}")
             detection_results.append(result)
 
+        # ── Aggregation + explainability ─────────────────────────────────────
         engine_signals = ctx.get_engine_signals_snapshot()
         report = await _aggregator.aggregate(
             artifact=artifact,
@@ -165,6 +178,7 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
         report.analysis_id = analysis_row.id
         report = _explainer.explain(report)
 
+        # ── Persist results ───────────────────────────────────────────────────
         for dr in detection_results:
             db.add(DetectionResultDB(
                 analysis_id=analysis_row.id,
@@ -227,11 +241,9 @@ async def analyze(
     - `metadata` (form field, optional): JSON object string
     """
     content_type = request.headers.get("content-type", "")
-
     if "multipart/form-data" in content_type:
         return await _analyze_upload(request, db)
-    else:
-        return await _analyze_json(request, db)
+    return await _analyze_json(request, db)
 
 
 async def _analyze_json(request: Request, db: AsyncSession) -> RiskReport:
@@ -268,7 +280,6 @@ async def _analyze_upload(request: Request, db: AsyncSession) -> RiskReport:
         ) from None
 
     upload: UploadFile | None = form.get("file")  # type: ignore[assignment]
-
     if upload is None:
         raise HTTPException(status_code=422, detail="Multipart field 'file' is required.")
 
@@ -276,9 +287,8 @@ async def _analyze_upload(request: Request, db: AsyncSession) -> RiskReport:
     original_filename = upload.filename or "upload.bin"
     declared_mime = upload.content_type or "application/octet-stream"
 
-    # Upload hardening
     try:
-        _result = validate_upload(
+        validate_upload(
             data=raw_bytes,
             original_filename=original_filename,
             declared_mime=declared_mime,

@@ -1,4 +1,4 @@
-"""Detector 08 — Recruitment Scams (Domain 1: Phishing & Social Engineering)."""
+"""Detector 08 — Recruitment Scams (Domain 1)."""
 
 from __future__ import annotations
 
@@ -6,6 +6,11 @@ from typing import TYPE_CHECKING
 
 from app.core.registry import register_detector
 from app.detectors.base import BaseDetector
+from app.detectors.d1_phishing._nlp_helpers import (
+    build_evidence,
+    nlp_verdict,
+    score_from_signals,
+)
 from app.schemas.schemas import Artifact, ArtifactType, DetectionResult
 
 if TYPE_CHECKING:
@@ -14,20 +19,24 @@ if TYPE_CHECKING:
 
 @register_detector
 class RecruitmentScamDetector(BaseDetector):
-    """Detects recruitment scams: recruitment_context signal, unrealistic salary/offer,
-    registration/training-fee requests, document/ID/bank-detail requests,
-    free-mail HR addresses (gmail/yahoo HR), domain analysis.
-
-    Stage implementation: Stage 5.
-    """
+    """Detects fake job/work-from-home recruitment scams."""
 
     detector_id = "d08_recruitment_scams"
-    name = "Recruitment Scams"
+    name = "Recruitment Scam"
     domain = "Phishing & Social Engineering"
     domain_id = "d1"
-    accepted_artifact_types = [ArtifactType.EMAIL, ArtifactType.SMS]
-    required_engines = ["nlp", "url"]
+    accepted_artifact_types = [ArtifactType.EMAIL, ArtifactType.SMS, ArtifactType.WEBPAGE]
+    required_engines = ["nlp"]
 
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
-        """Run recruitment scam detection (stub)."""
-        return self._not_implemented(artifact)
+        nlp = await ctx.get_nlp_signals()
+        sw = {
+            "recruitment_context": (nlp.recruitment_context, 0.40),
+            "reward_scarcity":     (nlp.reward_scarcity,     0.20),
+            "financial_intent":    (nlp.financial_intent,    0.20),
+            "manipulation":        (nlp.manipulation,        0.10),
+            "payment_request":     (nlp.payment_request,     0.10),
+        }
+        score = score_from_signals(sw)
+        evidence = build_evidence(nlp, "nlp", sw)
+        return self._result(artifact, score, nlp_verdict(score), evidence)

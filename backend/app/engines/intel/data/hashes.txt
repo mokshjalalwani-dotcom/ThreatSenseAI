@@ -1,0 +1,6 @@
+# Known malware SHA-256 hash blocklist
+# Sources: MalwareBazaar, VirusShare (requires account)
+# Format: one lowercase sha256 hex per line
+#
+# Synthetic test entries only:
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855

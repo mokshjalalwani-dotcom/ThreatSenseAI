@@ -1,0 +1,7 @@
+# Known malicious URL blocklist
+# Sources: URLhaus CSV, PhishTank
+# Format: one full URL per line
+#
+# Synthetic test entries only:
+http://phishing-example-test.xyz/login
+http://malware-test-domain.tk/payload.exe

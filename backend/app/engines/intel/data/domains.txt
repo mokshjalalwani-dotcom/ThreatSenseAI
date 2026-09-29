@@ -1,0 +1,13 @@
+# Known malicious / phishing domains blocklist
+# Sources: PhishTank CSV, OpenPhish, abuse.ch
+# Format: one domain per line, no http:// prefix
+# Updated: see ml/data/README.md for download instructions
+#
+# Examples (synthetic safe data for CI):
+phishing-example-test.xyz
+malware-test-domain.tk
+scam-example.ml
+fake-paypal-login.cf
+sbi-fraud-site.ga
+verify-account-evil.top
+income-tax-refund-scam.pw

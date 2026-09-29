@@ -1,66 +1,29 @@
 """
-Fine-tuned DeBERTa backend — STUB ONLY until Stage 13.
+FinetunedBackend — stub for Stage 13 DeBERTa fine-tuned model.
 
-This module defines the interface, expected artifact path, and config keys
-for the fine-tuned model so that:
-  1. Selecting NLP_BACKEND=finetuned raises a clear, non-crashing error
-     message from the API (never a silent failure or ImportError).
-  2. Detectors that import NLPEngine never import this module directly.
-  3. When Stage 13 trains the model, only THIS module changes; detector
-     code stays identical.
-
-Interface contract (for Stage 13)
-----------------------------------
-Input : str (raw UTF-8 text, any length — chunking is handled internally)
-Output: NLPSignals (identical schema; backend_used="finetuned")
-
-Expected artifact location
---------------------------
-    ml/artifacts/nlp_model/
-        model/                     ← HuggingFace model directory
-        config.json
-        tokenizer/
-        REPORT.md
-        model_card.md
-
-Config keys (all optional — reasonable defaults apply)
-------------------------------------------------------
-    NLP_FINETUNED_MODEL_PATH   = ml/artifacts/nlp_model/model
-    NLP_FINETUNED_MAX_LENGTH   = 512
-    NLP_FINETUNED_BATCH_SIZE   = 8
-    NLP_FINETUNED_DEVICE       = auto   (auto | cpu | cuda | mps)
-
-See docs/NLP_FINETUNE_PLAN.md for the full Stage 13 specification.
+This backend is a STUB until Stage 13 is explicitly started.
+It falls back to RulesBackend for all calls.
 """
 
 from __future__ import annotations
 
+import logging
+
 from app.engines.nlp.backends.base import SignalBackend
+from app.engines.nlp.backends.rules import RulesBackend
 from app.schemas.schemas import NLPSignals
 
-_NOT_TRAINED_MSG = (
-    "NLP_BACKEND=finetuned is not available yet. "
-    "The DeBERTa fine-tuned model will be implemented in Stage 13. "
-    "Switch to NLP_BACKEND=rules (default), zeroshot, or ensemble."
-)
+logger = logging.getLogger(__name__)
 
 
 class FinetunedBackend(SignalBackend):
-    """Stub for the Stage-13 fine-tuned DeBERTa backend.
-
-    Raises a clear RuntimeError on every call so that developers who
-    accidentally select this backend get an actionable error instead of a
-    silent zero or a cryptic ImportError.
-    """
+    """Stub backend — falls back to rules until Stage 13 fine-tuned model lands."""
 
     @property
     def backend_name(self) -> str:
         return "finetuned"
 
     async def analyze(self, text: str) -> NLPSignals:
-        """Raise NotImplementedError — model not yet trained.
-
-        Raises:
-            NotImplementedError: Always, until Stage 13 is complete.
-        """
-        raise NotImplementedError(_NOT_TRAINED_MSG)
+        logger.debug("FinetunedBackend is a stub — delegating to RulesBackend")
+        signals = await RulesBackend().analyze(text)
+        return signals.model_copy(update={"backend_used": "finetuned_stub"})

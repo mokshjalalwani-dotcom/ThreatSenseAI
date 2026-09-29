@@ -117,3 +117,26 @@ class BaseDetector(ABC):
     def accepts(self, artifact_type: ArtifactType) -> bool:
         """Return True if this detector handles the given artifact type."""
         return artifact_type in self.accepted_artifact_types
+
+    def _result(
+        self,
+        artifact: Artifact,
+        score: float,
+        verdict: Verdict,
+        evidence: list[Evidence],
+        signals: list[str] | None = None,
+    ) -> DetectionResult:
+        """Convenience factory for a fully populated DetectionResult."""
+        confidence = round(min(0.95, score + 0.08), 3)
+        return DetectionResult(
+            detector_id=self.detector_id,
+            name=self.name,
+            domain=self.domain,
+            domain_id=self.domain_id,
+            score=round(score, 4),
+            verdict=verdict,
+            confidence=confidence,
+            evidence=evidence,
+            signals_used=signals or self.required_engines,
+        )
+

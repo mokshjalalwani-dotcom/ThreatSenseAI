@@ -9,7 +9,7 @@
 | 0 | Master Context / Project Rules | ✅ Done | — |
 | 1 | Scaffold: schemas, registry, 22 stubs, AnalysisContext | ✅ Done | STAGE_1_REPORT.md |
 | 2 | Input handling: normalizers, router, SafeFetcher, upload hardening | ✅ Done | STAGE_2_REPORT.md |
-| 3 | URL/Domain Engine + Detectors 10–14 | 🔄 In Progress | — |
+| 3 | URL/Domain Engine + Detectors 10–14 | ✅ Done | STAGE_3_REPORT.md |
 | 4 | Shared NLP Engine (rules + zeroshot) | ⏳ Pending | — |
 | 5 | Domain 1: Phishing & Social Engineering (D01–D09) | ⏳ Pending | — |
 | 6 | Domain 3: Web & Credential Security (D15–D17) | ⏳ Pending | — |
@@ -25,24 +25,24 @@
 
 ## Stage 3 Detail Checklist
 
-- [ ] URL feature extractor (`features.py`) — 20+ structural features
-- [ ] URLEngine updated — model inference + rule-based fallback
-- [ ] Brand YAML + TLD-risk YAML config files
-- [ ] D10 MaliciousURL — model-backed + rule fallback + SHAP
-- [ ] D11 BrandImpersonation — RapidFuzz + rules
-- [ ] D12 MaliciousRedirects — SafeFetcher chain analysis
-- [ ] D13 URLObfuscation — encoding decode, @-trick, IP forms
-- [ ] D14 IDN/Homograph — xn-- decode, confusables, skeleton check
-- [ ] Download script `ml/training/download_url_data.py`
-- [ ] Training script `ml/training/train_url_model.py`
-- [ ] ml/data/README.md updated with dataset sources + licences
-- [ ] ml/artifacts/url_model/REPORT.md
-- [ ] Test fixtures (≥15 positive + ≥15 negative per detector)
-- [ ] test_url_engine.py
-- [ ] test_d2_detectors.py
-- [ ] STAGE_3_REPORT.md
-- [ ] make test green (≥122 existing + new tests)
-- [ ] make lint green
+- [x] URL feature extractor (`features.py`) — 28 structural + 5 network features
+- [x] URLEngine updated — model inference + rule-based fallback
+- [x] Brand YAML + TLD-risk config in `features.py`
+- [x] D10 MaliciousURL — model-backed + rule fallback + SHAP
+- [x] D11 BrandImpersonation — tldextract roots, fuzz.ratio, leet normalization, no FPs
+- [x] D12 MaliciousRedirects — SafeFetcher chain analysis + shortener detection
+- [x] D13 URLObfuscation — encoding decode, @-trick, octal/hex/decimal IP, entropy
+- [x] D14 IDN/Homograph — xn-- decode, confusables, skeleton check
+- [x] Download script `ml/training/download_url_data.py`
+- [x] Training script `ml/training/train_url_model.py`
+- [x] ml/data/README.md updated with dataset sources + licences
+- [x] ml/artifacts/url_model/REPORT.md
+- [x] Test fixtures (≥15 positive + ≥15 negative per detector)
+- [x] test_url_engine.py  (80 tests)
+- [x] test_d2_detectors.py  (159 tests)
+- [x] STAGE_3_REPORT.md
+- [x] make test green — **337/337 passed**
+- [x] make lint green — **0 ruff errors**
 
 ---
 
