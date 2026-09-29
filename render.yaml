@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: threatsense-api
+    env: docker
+    region: oregon
+    plan: free
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      # Required database URL (Render injects this if you attach a Postgres database, or you can use a free tier DB URI)
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///threatsense.db # Fallback to SQLite if no Postgres is provided
+      # If you want to enable the zero-shot NLP engine:
+      - key: NLP_ZEROSHOT
+        value: "false" # Keep false for free tier to save memory (model requires ~500MB)
+      # If you want to enable live URLhaus lookups:
+      - key: INTEL_OFFLINE
+        value: "false"

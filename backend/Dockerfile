@@ -5,10 +5,12 @@ LABEL description="THREAT-SENSE AI — FastAPI backend"
 
 WORKDIR /app
 
-# System dependencies (libpq for asyncpg, curl for healthcheck)
+# System dependencies (libpq for asyncpg, curl for healthcheck, tesseract/zbar for MediaEngine)
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libpq-dev \
         curl \
+        tesseract-ocr \
+        libzbar0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies first (layer-cached until pyproject.toml changes)
