@@ -1,0 +1,19 @@
+From: "PayPal Security" <admin@paypa1-update.xyz>
+To: target@example.com
+Subject: Action Required: Unauthorised login attempt detected
+Date: Tue, 29 Sep 2026 12:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Reply-To: attacker-inbox@gmail.com
+Authentication-Results: mx.google.com; spf=fail; dkim=neutral; dmarc=fail
+
+<html>
+<body>
+  <h2>Unauthorised login attempt from Moscow, Russia</h2>
+  <p>Dear Customer,</p>
+  <p>We detected a login attempt to your PayPal account from an unrecognised device. If this was not you, please secure your account immediately.</p>
+  <p><a href="http://secure-login.paypa1-update.xyz/verify">Secure My Account</a></p>
+  <br>
+  <p>Thank you,<br>PayPal Security Team</p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+http://secure-login.paypa1-update.xyz/verify-account?token=12345&user=john
