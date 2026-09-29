@@ -20,8 +20,9 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 # Path to the pre-trained model artifact (relative to repo root)
+# Using .parent chaining is safer than .parents[4] which throws IndexError in shallow Docker filesystems
 _MODEL_PATH = (
-    Path(__file__).resolve().parents[5]  # repo root
+    Path(__file__).resolve().parent.parent.parent.parent.parent 
     / "ml" / "artifacts" / "url_model" / "model.joblib"
 )
 
