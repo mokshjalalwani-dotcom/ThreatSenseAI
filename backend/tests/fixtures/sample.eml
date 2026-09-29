@@ -1,0 +1,43 @@
+From: Sender Name <sender@benign-example.com>
+To: Recipient <recipient@example.org>
+Subject: Quarterly Report - Please Review
+Date: Mon, 29 Sep 2026 09:00:00 +0000
+Message-ID: <test-fixture-001@benign-example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==FIXTURE_BOUNDARY_001=="
+Received-SPF: pass (domain of benign-example.com designates 203.0.113.1 as permitted sender)
+
+--==FIXTURE_BOUNDARY_001==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find the quarterly report attached.
+
+You can also review the summary online at:
+  https://reports.benign-example.com/q3-2026?token=abc123
+
+For further details visit our documentation portal:
+  https://docs.benign-example.com/reports/quarterly
+
+If you have any questions please reply to this email or call us on
++91-98765-43210.
+
+Regards,
+Sender Name
+Benign Example Corp
+
+--==FIXTURE_BOUNDARY_001==
+Content-Type: application/pdf
+Content-Disposition: attachment; filename="Q3_2026_Report.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5k
+b2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPD4K
+ZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3gg
+WzAgMCA2MTIgNzkyXQo+PgplbmRvYmoKeHJlZgowIDQKMDAwMDAwMDAwMCA2NTUzNSBmIAow
+MDAwMDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNjIgMDAwMDAgbiAKMDAwMDAwMDExOSAwMDAwMCBu
+IApzdGFydHhyZWYKMjA1CiUlRU9G
+
+--==FIXTURE_BOUNDARY_001==--

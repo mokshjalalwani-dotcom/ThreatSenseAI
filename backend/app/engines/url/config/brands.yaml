@@ -1,0 +1,303 @@
+# Brand → legitimate domains map for D11 (Brand Impersonation) and D14 (IDN/Homograph).
+#
+# Format:
+#   brand_key:        Lowercase brand name used internally
+#   display_name:     Human-readable name shown in evidence
+#   domains:          List of ALL legitimate domains for this brand (including subdomains like login.*)
+#   aliases:          Optional alternate names/spellings to match against URL text
+#   india_priority:   true = prioritise in scoring for Indian-context deployments
+#
+# Editing policy:
+#   - Add new brands in alphabetical order within each section.
+#   - Never remove a brand; mark inactive ones with `active: false`.
+#   - Bump the version string when the file changes.
+#
+# Version: 1.0.0
+
+version: "1.0.0"
+
+brands:
+
+  # ── Global Financial ─────────────────────────────────────────────────────────
+
+  - brand_key: amazon
+    display_name: Amazon
+    domains: [amazon.com, amazon.in, amazon.co.uk, amazon.de, amazon.fr,
+              amazon.co.jp, amazonpay.in, pay.amazon.com, signin.aws.amazon.com]
+    aliases: [amzn, amzon]
+
+  - brand_key: apple
+    display_name: Apple
+    domains: [apple.com, icloud.com, appleid.apple.com, itunes.apple.com,
+              support.apple.com, iforgot.apple.com]
+    aliases: [appie, aple]
+
+  - brand_key: ebay
+    display_name: eBay
+    domains: [ebay.com, ebay.co.uk, ebay.in, ebay.com.au, signin.ebay.com]
+    aliases: [e-bay, ebays]
+
+  - brand_key: facebook
+    display_name: Facebook / Meta
+    domains: [facebook.com, fb.com, messenger.com, meta.com, m.facebook.com,
+              login.facebook.com, www.facebook.com]
+    aliases: [facbook, facebok, fcebook, metabook]
+
+  - brand_key: google
+    display_name: Google
+    domains: [google.com, google.co.in, google.co.uk, accounts.google.com,
+              mail.google.com, gmail.com, drive.google.com, play.google.com,
+              myaccount.google.com, pay.google.com, google.com.au]
+    aliases: [g00gle, gooogle, googIe]
+
+  - brand_key: instagram
+    display_name: Instagram
+    domains: [instagram.com, www.instagram.com]
+    aliases: [instagramm, instagran, instagrarn]
+
+  - brand_key: linkedin
+    display_name: LinkedIn
+    domains: [linkedin.com, www.linkedin.com, lnkd.in]
+    aliases: [linkedln, linkdin]
+
+  - brand_key: microsoft
+    display_name: Microsoft
+    domains: [microsoft.com, live.com, hotmail.com, outlook.com, office.com,
+              office365.com, microsoftonline.com, login.microsoftonline.com,
+              login.live.com, account.microsoft.com, onmicrosoft.com,
+              sharepoint.com, teams.microsoft.com, azure.com, windowsazure.com]
+    aliases: [mircrosoft, micros0ft, m1crosoft]
+
+  - brand_key: netflix
+    display_name: Netflix
+    domains: [netflix.com, www.netflix.com, help.netflix.com]
+    aliases: [netfl1x, netf1ix, netflex]
+
+  - brand_key: paypal
+    display_name: PayPal
+    domains: [paypal.com, paypal.me, www.paypal.com, checkout.paypal.com,
+              paypal.in]
+    aliases: [paypa1, paypa, paypai, paipal]
+
+  - brand_key: twitter_x
+    display_name: Twitter / X
+    domains: [twitter.com, x.com, t.co, www.twitter.com]
+    aliases: [twiter, twiiter, tw1tter]
+
+  - brand_key: whatsapp
+    display_name: WhatsApp
+    domains: [whatsapp.com, wa.me, web.whatsapp.com]
+    aliases: [whtsapp, whattsapp, watsapp]
+
+  - brand_key: youtube
+    display_name: YouTube
+    domains: [youtube.com, youtu.be, www.youtube.com, m.youtube.com]
+    aliases: [y0utube, youtub, yout00be]
+
+  # ── E-commerce ───────────────────────────────────────────────────────────────
+
+  - brand_key: flipkart
+    display_name: Flipkart
+    india_priority: true
+    domains: [flipkart.com, www.flipkart.com, seller.flipkart.com,
+              affiliate.flipkart.com, myntra.com, jabong.com]
+    aliases: [flipcart, flip-kart, flipkartt]
+
+  - brand_key: meesho
+    display_name: Meesho
+    india_priority: true
+    domains: [meesho.com, www.meesho.com, meesho.in]
+    aliases: [meeshu, mesho]
+
+  - brand_key: snapdeal
+    display_name: Snapdeal
+    india_priority: true
+    domains: [snapdeal.com, www.snapdeal.com]
+    aliases: [snap-deal, snapdeals]
+
+  # ── UPI / Payment Apps ───────────────────────────────────────────────────────
+
+  - brand_key: bhim
+    display_name: BHIM (NPCI)
+    india_priority: true
+    domains: [bhimupi.org.in, www.bhimupi.org.in, npci.org.in]
+    aliases: [bhim-upi, bhimupi]
+
+  - brand_key: gpay
+    display_name: Google Pay (GPay)
+    india_priority: true
+    domains: [pay.google.com, gpay.app, tez.google.com]
+    aliases: [g-pay, googlepay, gpays]
+
+  - brand_key: paytm
+    display_name: Paytm
+    india_priority: true
+    domains: [paytm.com, www.paytm.com, paytmbank.com, paytmmoney.com,
+              paytminsurance.com, paytm.in, blog.paytm.com]
+    aliases: [pay-tm, paytmm, paytms]
+
+  - brand_key: phonepe
+    display_name: PhonePe
+    india_priority: true
+    domains: [phonepe.com, www.phonepe.com, business.phonepe.com]
+    aliases: [phone-pe, phon3pe, p-hone-pe]
+
+  - brand_key: razorpay
+    display_name: Razorpay
+    india_priority: true
+    domains: [razorpay.com, www.razorpay.com, dashboard.razorpay.com]
+    aliases: [razor-pay, razorpays]
+
+  # ── Indian Banks ─────────────────────────────────────────────────────────────
+
+  - brand_key: axis_bank
+    display_name: Axis Bank
+    india_priority: true
+    domains: [axisbank.com, www.axisbank.com, netbanking.axisbank.com,
+              online.axisbank.co.in, axisbank.co.in]
+    aliases: [axis-bank, axisbnk]
+
+  - brand_key: bob
+    display_name: Bank of Baroda
+    india_priority: true
+    domains: [bankofbaroda.in, www.bankofbaroda.in, bobibanking.com,
+              bobfinancial.com]
+    aliases: [bankofbaroda, bob-india]
+
+  - brand_key: canara_bank
+    display_name: Canara Bank
+    india_priority: true
+    domains: [canarabank.com, www.canarabank.com, netbanking.canarabank.com]
+    aliases: [canara-bank, canarabnk]
+
+  - brand_key: hdfc
+    display_name: HDFC Bank
+    india_priority: true
+    domains: [hdfcbank.com, www.hdfcbank.com, netbanking.hdfcbank.com,
+              hdfcsec.com, hdfclife.com, hdfcergo.com, hdfc.com]
+    aliases: [hdfc-bank, hdfcbnk, hdfk]
+
+  - brand_key: icici
+    display_name: ICICI Bank
+    india_priority: true
+    domains: [icicibank.com, www.icicibank.com, icici.com, icicipruli.com,
+              icicidirect.com, icicibank.co.in, icici.bank.com]
+    aliases: [icici-bank, icicibnak, icic1]
+
+  - brand_key: idbi
+    display_name: IDBI Bank
+    india_priority: true
+    domains: [idbibank.in, www.idbibank.in, idbi.com]
+    aliases: [idbi-bank]
+
+  - brand_key: kotak
+    display_name: Kotak Mahindra Bank
+    india_priority: true
+    domains: [kotak.com, www.kotak.com, netbanking.kotak.com,
+              kotakbank.com, kotakmahindra.com]
+    aliases: [kotak-bank, kotakbnk]
+
+  - brand_key: pnb
+    display_name: Punjab National Bank
+    india_priority: true
+    domains: [pnbindia.in, www.pnbindia.in, netpnb.com]
+    aliases: [pnb-bank, punjab-national-bank]
+
+  - brand_key: sbi
+    display_name: State Bank of India
+    india_priority: true
+    domains: [sbi.co.in, www.sbi.co.in, onlinesbi.sbi, sbionline.sbi,
+              retail.onlinesbi.sbi, corporate.onlinesbi.sbi, sbiintouch.com,
+              sbiyono.sbi]
+    aliases: [sbi-bank, sbionline, s-bi, sbipay]
+
+  - brand_key: union_bank
+    display_name: Union Bank of India
+    india_priority: true
+    domains: [unionbankofindia.co.in, www.unionbankofindia.co.in,
+              unet.unionbankofindia.co.in]
+    aliases: [union-bank]
+
+  # ── Indian Government / Services ─────────────────────────────────────────────
+
+  - brand_key: digilocker
+    display_name: DigiLocker
+    india_priority: true
+    domains: [digilocker.gov.in, www.digilocker.gov.in, api.digilocker.gov.in]
+    aliases: [digiloker, digi-locker]
+
+  - brand_key: epfo
+    display_name: EPFO (PF Office)
+    india_priority: true
+    domains: [epfindia.gov.in, www.epfindia.gov.in, unifiedportal-mem.epfindia.gov.in,
+              passbook.epfindia.gov.in]
+    aliases: [epfo-india, pf-india]
+
+  - brand_key: income_tax
+    display_name: Income Tax Department India
+    india_priority: true
+    domains: [incometax.gov.in, www.incometax.gov.in, efiling.incometax.gov.in,
+              incometaxindiaefiling.gov.in, tin.tin.nsdl.com]
+    aliases: [income-tax-india, it-efiling, incometaxefiling]
+
+  - brand_key: irctc
+    display_name: IRCTC
+    india_priority: true
+    domains: [irctc.co.in, www.irctc.co.in, irctcconnect.in,
+              irctctourism.com, irctcecatering.co.in]
+    aliases: [ir-ctc, irctcs]
+
+  - brand_key: uidai
+    display_name: UIDAI / Aadhaar
+    india_priority: true
+    domains: [uidai.gov.in, www.uidai.gov.in, resident.uidai.gov.in,
+              myaadhaar.uidai.gov.in, selfservice.uidai.gov.in]
+    aliases: [aadhaar-uidai, aadhar, uidais]
+
+  # ── Telecom ──────────────────────────────────────────────────────────────────
+
+  - brand_key: airtel
+    display_name: Airtel
+    india_priority: true
+    domains: [airtel.in, www.airtel.in, airtel.com, airtelpay.in,
+              airtelmoney.in, payments.airtel.in]
+    aliases: [air-tel, airtell]
+
+  - brand_key: bsnl
+    display_name: BSNL
+    india_priority: true
+    domains: [bsnl.co.in, www.bsnl.co.in, portal2.bsnl.co.in]
+    aliases: [bsnl-india]
+
+  - brand_key: jio
+    display_name: Jio / Reliance
+    india_priority: true
+    domains: [jio.com, www.jio.com, jiosaavn.com, jiocinema.com,
+              jiomart.com, jiomoney.com, digitalstore.jio.com,
+              myaccount.jio.com]
+    aliases: [ji0, jios, reliancejio]
+
+  - brand_key: vodafone_idea
+    display_name: Vodafone Idea (Vi)
+    india_priority: true
+    domains: [myvi.in, www.myvi.in, vodafone.in, idea.net.in]
+    aliases: [vi-india, vodafone-india, ideacellular]
+
+  # ── Crypto / Finance ─────────────────────────────────────────────────────────
+
+  - brand_key: binance
+    display_name: Binance
+    domains: [binance.com, www.binance.com, binance.us]
+    aliases: [binancce, binanc3, binances]
+
+  - brand_key: coinbase
+    display_name: Coinbase
+    domains: [coinbase.com, www.coinbase.com, accounts.coinbase.com]
+    aliases: [coinbas3, coinbases]
+
+  - brand_key: zerodha
+    display_name: Zerodha
+    india_priority: true
+    domains: [zerodha.com, www.zerodha.com, kite.zerodha.com, coin.zerodha.com,
+              varsity.zerodha.com]
+    aliases: [zerodhas, z3rodha]

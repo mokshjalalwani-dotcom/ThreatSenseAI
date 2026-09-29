@@ -1,0 +1,74 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+venv/
+env/
+ENV/
+*.pyo
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.log
+
+# ── Alembic ──────────────────────────────────────────────────────────────────
+# Keep versions tracked; ignore runtime artefacts
+backend/threatsense.db
+backend/threatsense.db-shm
+backend/threatsense.db-wal
+
+# ── ML artefacts (large binary files) ───────────────────────────────────────
+ml/artifacts/**/*.pt
+ml/artifacts/**/*.pkl
+ml/artifacts/**/*.joblib
+ml/artifacts/**/*.bin
+ml/artifacts/**/*.safetensors
+# Keep model cards and reports
+!ml/artifacts/**/REPORT.md
+!ml/artifacts/**/model_card.md
+
+# ── Secrets / keys ───────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+secrets/
+
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Test data that should never be committed ─────────────────────────────────
+# Real malware or real phishing samples
+backend/tests/fixtures/**/*.exe
+backend/tests/fixtures/**/*.scr

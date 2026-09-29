@@ -1,0 +1,87 @@
+{
+  "version": "20260929_142658",
+  "mode": "synthetic_ci",
+  "feature_names": [
+    "url_length",
+    "domain_length",
+    "subdomain_count",
+    "digit_count",
+    "special_char_count",
+    "entropy",
+    "param_count",
+    "path_depth",
+    "is_https",
+    "is_ip_host",
+    "has_punycode",
+    "suspicious_token_count",
+    "tld_risk",
+    "has_at_sign",
+    "double_slash_in_path",
+    "has_hex_encoding",
+    "is_shortener",
+    "path_has_exe",
+    "fragment_present",
+    "dash_count",
+    "token_length_max",
+    "dot_count",
+    "has_redirect_param",
+    "domain_age_days",
+    "dns_a_count",
+    "dns_mx_present",
+    "dns_ns_count",
+    "dns_ttl"
+  ],
+  "n_features": 28,
+  "train_samples": 80,
+  "test_samples": 21,
+  "train_positive_ratio": 0.5,
+  "metrics": {
+    "roc_auc": 0.990909090909091,
+    "pr_auc": 0.9924242424242424,
+    "f1_macro": 0.9045454545454545,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        2,
+        9
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 10.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.8181818181818182,
+        "f1-score": 0.9,
+        "support": 11.0
+      },
+      "accuracy": 0.9047619047619048,
+      "macro avg": {
+        "precision": 0.9166666666666667,
+        "recall": 0.9090909090909092,
+        "f1-score": 0.9045454545454545,
+        "support": 21.0
+      },
+      "weighted avg": {
+        "precision": 0.9206349206349207,
+        "recall": 0.9047619047619048,
+        "f1-score": 0.9043290043290044,
+        "support": 21.0
+      }
+    }
+  },
+  "latency": {
+    "median_ms": 11.630099998001242,
+    "p99_ms": 142.87907999969323,
+    "benchmark_samples": 100
+  },
+  "training_time_s": 3.7426412105560303,
+  "trained_at": "2026-09-29T14:26:58.919769+00:00"
+}
