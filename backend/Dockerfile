@@ -29,5 +29,6 @@ RUN mkdir -p /app/uploads && chmod 750 /app/uploads
 
 EXPOSE 8000
 
-# Run migrations then start the server
-CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+# FastAPI auto-creates SQLite tables on startup (see app/main.py on_startup).
+# For PostgreSQL, run: alembic upgrade head manually or via a release command.
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
