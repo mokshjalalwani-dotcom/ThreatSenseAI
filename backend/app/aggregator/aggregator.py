@@ -196,6 +196,14 @@ class RiskAggregator:
 
         raw_score = weighted_sum / weight_total if weight_total > 0 else 0.0
 
+        # Hard boost: if any single domain scores very high it must at least
+        # become SUSPICIOUS regardless of other domain weights.
+        max_domain_score = max(domain_scores.values(), default=0.0)
+        if max_domain_score >= 0.80:
+            raw_score = max(raw_score, 0.50)   # floor at LIKELY_MALICIOUS
+        elif max_domain_score >= 0.60:
+            raw_score = max(raw_score, 0.25)   # floor at SUSPICIOUS
+
         # ── 4. Hard override: intel hit ────────────────────────────────────────
         intel_hit = (engine_signals and engine_signals.intel
                      and bool(engine_signals.intel.hits))

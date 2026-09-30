@@ -1,0 +1,1889 @@
+[
+  {
+    "label": "Safe URL",
+    "type": "url",
+    "verdict": "safe",
+    "score": 2.77,
+    "confidence": 0.627,
+    "expected": [
+      "safe"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'tld_risk'=0.1 decreases malicious probability by 1.738",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_tld_risk",
+        "metadata": {
+          "feature": "tld_risk",
+          "value": 0.1,
+          "shap": -1.7382
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'url_length'=23 decreases malicious probability by 1.209",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_url_length",
+        "metadata": {
+          "feature": "url_length",
+          "value": 23.0,
+          "shap": -1.209
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'entropy'=3.64 decreases malicious probability by 0.312",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_entropy",
+        "metadata": {
+          "feature": "entropy",
+          "value": 3.6425,
+          "shap": -0.312
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'digit_count'=0 decreases malicious probability by 0.230",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_digit_count",
+        "metadata": {
+          "feature": "digit_count",
+          "value": 0.0,
+          "shap": -0.2303
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "Feature 'special_char_count'=0 decreases malicious probability by 0.158",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_special_char_count",
+        "metadata": {
+          "feature": "special_char_count",
+          "value": 0.0,
+          "shap": -0.1579
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "URL contains 1 suspicious token(s): 'google'",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "suspicious_tokens",
+        "metadata": {}
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.0,
+      "d2": 0.0922,
+      "d3": 0.0,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.0922,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Malicious URL",
+    "type": "url",
+    "verdict": "likely_malicious",
+    "score": 70.0,
+    "confidence": 0.664,
+    "expected": [
+      "likely_malicious",
+      "malicious",
+      "suspicious"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "nlp",
+        "severity": "critical",
+        "description": "Phishing intent detected in message text (score=0.25)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_phishing_intent",
+        "metadata": {
+          "signal": "phishing_intent",
+          "score": 0.25
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "Message requests credentials, OTP, or personal information (score=0.50)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {
+          "signal": "credential_request",
+          "score": 0.5
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'url_length'=61 increases malicious probability by 1.861",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_url_length",
+        "metadata": {
+          "feature": "url_length",
+          "value": 61.0,
+          "shap": 1.8607
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'tld_risk'=0.1 decreases malicious probability by 1.346",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_tld_risk",
+        "metadata": {
+          "feature": "tld_risk",
+          "value": 0.1,
+          "shap": -1.3461
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'entropy'=4.31 increases malicious probability by 0.542",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_entropy",
+        "metadata": {
+          "feature": "entropy",
+          "value": 4.3112,
+          "shap": 0.5416
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'special_char_count'=4 increases malicious probability by 0.240",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_special_char_count",
+        "metadata": {
+          "feature": "special_char_count",
+          "value": 4.0,
+          "shap": 0.2405
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "URL risk score: 0.79",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "url_risk_score",
+        "metadata": {}
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "Feature 'digit_count'=0 decreases malicious probability by 0.114",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_digit_count",
+        "metadata": {
+          "feature": "digit_count",
+          "value": 0.0,
+          "shap": -0.1143
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "URL contains 6 suspicious token(s): 'login', 'secure', 'auth', 'update', 'paypal'",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "suspicious_tokens",
+        "metadata": {}
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.2125,
+      "d2": 0.7875,
+      "d3": 0.1575,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.2125,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.7875,
+        "ran": true,
+        "verdict": "malicious"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.1575,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Benign email",
+    "type": "email",
+    "verdict": "safe",
+    "score": 10.48,
+    "confidence": 0.599,
+    "expected": [
+      "safe"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "nlp",
+        "severity": "medium",
+        "description": "Message creates artificial urgency (score=0.25)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_urgency",
+        "metadata": {
+          "signal": "urgency",
+          "score": 0.25
+        }
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.3493,
+      "d2": 0.0,
+      "d3": 0.0,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0812,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d02_social_engineering": {
+        "score": 0.2,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0688,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.025,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.025,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "error"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Phishing email",
+    "type": "email",
+    "verdict": "likely_malicious",
+    "score": 70.0,
+    "confidence": 0.689,
+    "expected": [
+      "likely_malicious",
+      "malicious",
+      "suspicious"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "nlp",
+        "severity": "critical",
+        "description": "Phishing intent detected in message text (score=0.88)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_phishing_intent",
+        "metadata": {
+          "signal": "phishing_intent",
+          "score": 0.875
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "Message requests credentials, OTP, or personal information (score=1.00)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {
+          "signal": "credential_request",
+          "score": 1.0
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'url_length'=61 increases malicious probability by 1.861",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_url_length",
+        "metadata": {
+          "feature": "url_length",
+          "value": 61.0,
+          "shap": 1.8607
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'tld_risk'=0.1 decreases malicious probability by 1.346",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_tld_risk",
+        "metadata": {
+          "feature": "tld_risk",
+          "value": 0.1,
+          "shap": -1.3461
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'entropy'=4.31 increases malicious probability by 0.542",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_entropy",
+        "metadata": {
+          "feature": "entropy",
+          "value": 4.3112,
+          "shap": 0.5416
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'special_char_count'=4 increases malicious probability by 0.240",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_special_char_count",
+        "metadata": {
+          "feature": "special_char_count",
+          "value": 4.0,
+          "shap": 0.2405
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "NLP credential request signal (1.00)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {}
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "medium",
+        "description": "Message creates artificial urgency (score=0.75)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_urgency",
+        "metadata": {
+          "signal": "urgency",
+          "score": 0.75
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "Feature 'digit_count'=0 decreases malicious probability by 0.114",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_digit_count",
+        "metadata": {
+          "feature": "digit_count",
+          "value": 0.0,
+          "shap": -0.1143
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "medium",
+        "description": "URL contains 6 suspicious token(s): 'login', 'secure', 'auth', 'update', 'paypal'",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "suspicious_tokens",
+        "metadata": {}
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.9525,
+      "d2": 0.7875,
+      "d3": 0.25,
+      "d4": 0.075,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.6687,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d02_social_engineering": {
+        "score": 0.6,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d03_spear_phishing": {
+        "score": 0.5813,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.075,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.075,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.7875,
+        "ran": true,
+        "verdict": "malicious"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.25,
+        "ran": true,
+        "verdict": "suspicious"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.075,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Safe SMS",
+    "type": "sms",
+    "verdict": "safe",
+    "score": 0.0,
+    "confidence": 0.591,
+    "expected": [
+      "safe"
+    ],
+    "pass": true,
+    "evidence": [],
+    "domain_scores": {
+      "d1": 0.0,
+      "d2": 0.0,
+      "d3": 0.0,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "error"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Smishing SMS",
+    "type": "sms",
+    "verdict": "likely_malicious",
+    "score": 70.0,
+    "confidence": 0.716,
+    "expected": [
+      "likely_malicious",
+      "malicious",
+      "suspicious"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "nlp",
+        "severity": "critical",
+        "description": "Phishing intent detected in message text (score=0.62)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_phishing_intent",
+        "metadata": {
+          "signal": "phishing_intent",
+          "score": 0.625
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "critical",
+        "description": "Scam/fraud intent detected in message text (score=0.25)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_scam_intent",
+        "metadata": {
+          "signal": "scam_intent",
+          "score": 0.25
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "Message requests credentials, OTP, or personal information (score=0.50)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {
+          "signal": "credential_request",
+          "score": 0.5
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'tld_risk'=0.7 increases malicious probability by 1.816",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_tld_risk",
+        "metadata": {
+          "feature": "tld_risk",
+          "value": 0.7,
+          "shap": 1.8164
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'url_length'=34 decreases malicious probability by 0.991",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_url_length",
+        "metadata": {
+          "feature": "url_length",
+          "value": 34.0,
+          "shap": -0.9908
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'entropy'=4.32 increases malicious probability by 0.278",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_entropy",
+        "metadata": {
+          "feature": "entropy",
+          "value": 4.315,
+          "shap": 0.2781
+        }
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "Feature 'digit_count'=0 decreases malicious probability by 0.211",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "shap_digit_count",
+        "metadata": {
+          "feature": "digit_count",
+          "value": 0.0,
+          "shap": -0.2106
+        }
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "NLP credential request signal (0.50)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {}
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "Scam intent detected (score=0.25)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_scam_intent",
+        "metadata": {}
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "medium",
+        "description": "Message creates artificial urgency (score=0.75)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_urgency",
+        "metadata": {
+          "signal": "urgency",
+          "score": 0.75
+        }
+      }
+    ],
+    "domain_scores": {
+      "d1": 1.0,
+      "d2": 0.9274,
+      "d3": 0.125,
+      "d4": 0.05,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.5312,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d02_social_engineering": {
+        "score": 1.0,
+        "ran": true,
+        "verdict": "malicious"
+      },
+      "d03_spear_phishing": {
+        "score": 0.5188,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0875,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.5625,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d06_government_scams": {
+        "score": 0.25,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.025,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.15,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.9274,
+        "ran": true,
+        "verdict": "malicious"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.125,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.05,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Safe webpage",
+    "type": "webpage",
+    "verdict": "safe",
+    "score": 10.97,
+    "confidence": 0.6,
+    "expected": [
+      "safe"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "URL risk score: 0.94",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "url_risk_score",
+        "metadata": {}
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "medium",
+        "description": "Message creates artificial urgency (score=0.25)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_urgency",
+        "metadata": {
+          "signal": "urgency",
+          "score": 0.25
+        }
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.2395,
+      "d2": 0.0,
+      "d3": 0.189,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d02_social_engineering": {
+        "score": 0.2,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.025,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.025,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "error"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.189,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Fake login page",
+    "type": "webpage",
+    "verdict": "likely_malicious",
+    "score": 50.0,
+    "confidence": 0.626,
+    "expected": [
+      "likely_malicious",
+      "malicious",
+      "suspicious"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "web",
+        "severity": "high",
+        "description": "Page contains a password input field",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "web_password_field",
+        "metadata": {}
+      },
+      {
+        "source_engine": "nlp",
+        "severity": "high",
+        "description": "NLP credential request signal (1.00)",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "nlp_credential_request",
+        "metadata": {}
+      },
+      {
+        "source_engine": "web",
+        "severity": "high",
+        "description": "Page claims to be 'microsoft' login page",
+        "matched_text": "microsoft",
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "web_claimed_brand",
+        "metadata": {}
+      },
+      {
+        "source_engine": "web",
+        "severity": "high",
+        "description": "Fake auth page contains password field",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "web_password_field",
+        "metadata": {}
+      },
+      {
+        "source_engine": "url",
+        "severity": "high",
+        "description": "URL risk score: 0.95",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "url_risk_score",
+        "metadata": {}
+      },
+      {
+        "source_engine": "web",
+        "severity": "medium",
+        "description": "Form action uses unencrypted HTTP",
+        "matched_text": null,
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "web_form_http",
+        "metadata": {}
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.0,
+      "d2": 0.0,
+      "d3": 0.8795,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "error"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.65,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.575,
+        "ran": true,
+        "verdict": "likely_malicious"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.1897,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Safe file",
+    "type": "file",
+    "verdict": "safe",
+    "score": 0.0,
+    "confidence": 0.6,
+    "expected": [
+      "safe"
+    ],
+    "pass": true,
+    "evidence": [],
+    "domain_scores": {
+      "d1": 0.0,
+      "d2": 0.0,
+      "d3": 0.0,
+      "d4": 0.0,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.0,
+        "ran": true,
+        "verdict": "safe"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  },
+  {
+    "label": "Malicious bat",
+    "type": "file",
+    "verdict": "likely_malicious",
+    "score": 70.0,
+    "confidence": 0.897,
+    "expected": [
+      "likely_malicious",
+      "malicious",
+      "suspicious"
+    ],
+    "pass": true,
+    "evidence": [
+      {
+        "source_engine": "email",
+        "severity": "critical",
+        "description": "Executable/script attachment: '5_suspicious_file.bat'",
+        "matched_text": "5_suspicious_file.bat",
+        "char_start": null,
+        "char_end": null,
+        "rule_id": "email_attachment",
+        "metadata": {}
+      }
+    ],
+    "domain_scores": {
+      "d1": 0.0,
+      "d2": 0.0,
+      "d3": 0.0,
+      "d4": 0.85,
+      "d5": 0.0
+    },
+    "detectors": {
+      "d01_email_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d02_social_engineering": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d03_spear_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d04_scam_fraud": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d05_smishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d06_government_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d07_financial_investment": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d08_recruitment_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d09_tech_support_scams": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d10_malicious_url": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d11_brand_impersonation": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d12_malicious_redirects": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d13_url_obfuscation": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d14_idn_homograph": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d15_credential_harvesting": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d16_fake_auth_pages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d17_malicious_webpages": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d18_bec": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d19_spam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d20_suspicious_attachments": {
+        "score": 0.85,
+        "ran": true,
+        "verdict": "malicious"
+      },
+      "d21_qr_phishing": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      },
+      "d22_screenshot_scam": {
+        "score": 0.0,
+        "ran": false,
+        "verdict": "unknown"
+      }
+    }
+  }
+]

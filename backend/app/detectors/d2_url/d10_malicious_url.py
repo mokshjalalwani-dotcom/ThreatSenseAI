@@ -145,7 +145,27 @@ class MaliciousURLDetector(BaseDetector):
 
 
 def _get_url(artifact: Artifact) -> str:
-    return artifact.normalized_url or artifact.raw_content or ""
+    """Return the best URL to analyse from this artifact.
+
+    Rules:
+    - URL artifact  → use normalized_url or raw_content (it IS a URL).
+    - EMAIL/SMS     → use first extracted_url from body; skip if none.
+    - WEBPAGE       → use normalized_url (the source URL) only; skip file uploads.
+    - Anything else → skip.
+    """
+    if artifact.type == ArtifactType.URL:
+        return (artifact.normalized_url or artifact.raw_content or "").strip()
+
+    if artifact.type in (ArtifactType.EMAIL, ArtifactType.SMS):
+        urls = artifact.extracted_urls or []
+        return urls[0].strip() if urls else ""
+
+    if artifact.type == ArtifactType.WEBPAGE:
+        # normalized_url is only set when a URL string was submitted;
+        # file-uploaded HTML pages have no source URL to score.
+        return (artifact.normalized_url or "").strip()
+
+    return ""
 
 
 def _score_to_verdict(score: float) -> Verdict:

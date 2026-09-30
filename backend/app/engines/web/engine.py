@@ -129,12 +129,32 @@ def _parse_html(html: str) -> WebSignals:
 class WebEngine:
     """HTML/DOM and credential-field analysis engine."""
 
+    # Simple heuristic: real HTML always starts with <, whitespace, or <!
+    _HTML_START_RE = re.compile(r"^\s*<", re.S)
+
     async def analyze(self, artifact: Artifact) -> WebSignals:
+        from app.schemas.schemas import ArtifactType
+
+        # Only parse actual HTML content — skip URLs, plain SMS, email body text
+        if artifact.type not in (ArtifactType.WEBPAGE, ArtifactType.EMAIL):
+            return WebSignals()
+
         html = artifact.raw_content or ""
-        
-        # M-2: Cap HTML parsing size to 500KB to prevent memory exhaustion
+
+        # For EMAIL artifacts the raw_content is plain text; prefer html_bodies metadata
+        if artifact.type == ArtifactType.EMAIL:
+            html_bodies = (artifact.metadata or {}).get("html_bodies", [])
+            html = "\n".join(html_bodies) if html_bodies else ""
+
+        # Cap HTML parsing size to 500 KB to prevent memory exhaustion
         html = html[: 500 * 1024]
-        
+
         if not html.strip():
             return WebSignals()
+
+        # Reject content that clearly isn't HTML (e.g. a URL string, plain text)
+        if not self._HTML_START_RE.match(html):
+            return WebSignals()
+
         return _parse_html(html)
+

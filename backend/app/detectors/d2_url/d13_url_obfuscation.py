@@ -92,8 +92,7 @@ class URLObfuscationDetector(BaseDetector):
     required_engines = ["url"]
 
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
-        url = artifact.normalized_url or artifact.raw_content or ""
-        url = url.strip()
+        url = _resolve_url(artifact).strip()
         if not url:
             return self._no_hit(artifact)
 
@@ -292,3 +291,15 @@ class URLObfuscationDetector(BaseDetector):
             evidence=[],
             signals_used=["url.has_hex_encoding"],
         )
+
+
+def _resolve_url(artifact: Artifact) -> str:
+    """Return a real URL from the artifact — never raw HTML or plain SMS/email body."""
+    if artifact.type == ArtifactType.URL:
+        return (artifact.normalized_url or artifact.raw_content or "").strip()
+    if artifact.type in (ArtifactType.EMAIL, ArtifactType.SMS):
+        urls = artifact.extracted_urls or []
+        return urls[0].strip() if urls else ""
+    if artifact.type == ArtifactType.WEBPAGE:
+        return (artifact.normalized_url or "").strip()
+    return ""
