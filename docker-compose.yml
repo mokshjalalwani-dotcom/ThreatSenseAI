@@ -32,6 +32,8 @@ services:
       PHISHTANK_API_KEY: ${PHISHTANK_API_KEY:-}
       SEND_URLS_TO_THIRD_PARTIES: ${SEND_URLS_TO_THIRD_PARTIES:-true}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      API_KEY: ${API_KEY:-}
+      API_KEY_HEADER: ${API_KEY_HEADER:-X-API-Key}
     depends_on:
       postgres:
         condition: service_healthy

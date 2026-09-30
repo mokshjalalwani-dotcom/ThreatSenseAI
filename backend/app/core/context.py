@@ -113,6 +113,14 @@ class AnalysisContext:
         key = f"intel:{indicator or self._artifact.raw_content}"
         return await self._get_or_compute(key, lambda: self._compute_intel(indicator))
 
+    async def get_media_qr_payloads(self) -> list[str]:
+        """Return decoded QR payloads (cached)."""
+        return await self._get_or_compute("media:qr", self._compute_media_qr)
+
+    async def get_media_ocr_text(self) -> str:
+        """Return extracted text from image (cached)."""
+        return await self._get_or_compute("media:ocr", self._compute_media_ocr)
+
     # ── Diagnostics ──────────────────────────────────────────────────────────
 
     def get_engine_call_count(self, engine_key: str) -> int:
@@ -205,6 +213,16 @@ class AnalysisContext:
             return IntelSignals(offline_mode=True)
         target = indicator or self._artifact.raw_content
         return await self._intel_provider.lookup(target)
+
+    async def _compute_media_qr(self) -> list[str]:
+        if self._media_engine is None:
+            return []
+        return await self._media_engine.decode_qr(self._artifact)
+
+    async def _compute_media_ocr(self) -> str:
+        if self._media_engine is None:
+            return ""
+        return await self._media_engine.extract_text_ocr(self._artifact)
 
     @staticmethod
     def _empty_default(key: str) -> Any:

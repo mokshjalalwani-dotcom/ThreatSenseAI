@@ -1,0 +1,1 @@
+URGENT: Your bank account has been locked due to suspicious activity. Verify your identity immediately at http://bank-secure-auth.xyz/verify or you will be charged a $50 penalty.

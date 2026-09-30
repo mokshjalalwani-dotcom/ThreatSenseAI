@@ -24,6 +24,5 @@ class FinetunedBackend(SignalBackend):
         return "finetuned"
 
     async def analyze(self, text: str) -> NLPSignals:
-        logger.debug("FinetunedBackend is a stub — delegating to RulesBackend")
-        signals = await RulesBackend().analyze(text)
-        return signals.model_copy(update={"backend_used": "finetuned_stub"})
+        logger.warning("FinetunedBackend is a stub — raising NotImplementedError")
+        raise NotImplementedError("Finetuned NLP backend is not implemented until Stage 13.")

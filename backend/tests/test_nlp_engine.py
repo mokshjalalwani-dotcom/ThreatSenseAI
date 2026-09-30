@@ -141,11 +141,10 @@ async def test_evidence_spans_populated():
 
 
 @pytest.mark.asyncio
-async def test_finetuned_backend_delegates():
+async def test_finetuned_backend_raises_not_implemented():
     backend = FinetunedBackend()
-    signals = await backend.analyze(PHISHING_EMAIL)
-    assert signals.backend_used == "finetuned_stub"
-    assert signals.phishing_intent >= 0.25  # delegates to rules
+    with pytest.raises(NotImplementedError, match="Stage 13"):
+        await backend.analyze(PHISHING_EMAIL)
 
 
 @pytest.mark.asyncio

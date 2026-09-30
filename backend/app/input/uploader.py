@@ -58,6 +58,8 @@ _ALLOWED_MIME: dict[str, frozenset[str]] = {
         "application/zip",
         "application/x-zip-compressed",
         "text/plain",
+        "text/html",
+        "application/xhtml+xml",
         "application/octet-stream",  # Allow and rely on magic-byte check
     }),
 }
@@ -71,7 +73,14 @@ _ALLOWED_EXTENSIONS: dict[str, frozenset[str]] = {
     "file": frozenset({
         ".pdf", ".doc", ".docx", ".xls", ".xlsx",
         ".ppt", ".pptx", ".txt", ".csv", ".zip",
-        ".7z", ".tar", ".gz",
+        ".7z", ".tar", ".gz", ".html", ".htm", ".xhtml",
+        # Allow suspicious extensions so they can be analysed
+        ".exe", ".scr", ".bat", ".cmd", ".com", ".pif",
+        ".vbs", ".vbe", ".js",  ".jse", ".ws",  ".wsh",
+        ".wsf", ".msi", ".msp", ".hta", ".cpl", ".reg",
+        ".dll", ".sys", ".lnk", ".iso", ".img", ".jar",
+        ".py",  ".ps1", ".psm1",
+        ".docm", ".xlsm", ".pptm", ".xlam", ".xltm",
     }),
 }
 
@@ -170,8 +179,26 @@ def validate_upload(
             f"{detected_mime!r} regardless of declared MIME {norm_mime!r}."
         )
 
-    # ── 5. MIME / magic consistency warning (log only, don't block) ───────────
+    # ── 5. MIME / magic consistency warning and blocking (M-4) ────────────────
     if detected_mime and norm_mime and detected_mime != norm_mime:
+        high_risk_mimes = {
+            "application/x-dosexec", "application/x-executable", 
+            "application/java-archive", "application/zip", 
+            "application/x-rar", "application/x-sh"
+        }
+        
+        # Exception for OOXML formats (docx, xlsx, pptx) which are technically ZIP files
+        ooxml_mimes = {
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        }
+        is_ooxml_zip = detected_mime == "application/zip" and norm_mime in ooxml_mimes
+        
+        if detected_mime in high_risk_mimes and not is_ooxml_zip:
+            raise UploadValidationError(
+                f"High-risk MIME mismatch: declared {norm_mime!r} but detected {detected_mime!r}."
+            )
         logger.warning(
             "Upload MIME mismatch: declared=%r detected=%r filename=%r",
             norm_mime,

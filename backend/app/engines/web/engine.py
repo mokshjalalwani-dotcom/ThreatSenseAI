@@ -131,6 +131,10 @@ class WebEngine:
 
     async def analyze(self, artifact: Artifact) -> WebSignals:
         html = artifact.raw_content or ""
+        
+        # M-2: Cap HTML parsing size to 500KB to prevent memory exhaustion
+        html = html[: 500 * 1024]
+        
         if not html.strip():
             return WebSignals()
         return _parse_html(html)

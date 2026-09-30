@@ -31,11 +31,11 @@ class SocialEngineeringDetector(BaseDetector):
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
         nlp = await ctx.get_nlp_signals()
         sw = {
-            "manipulation":   (nlp.manipulation,   0.35),
-            "authority":      (nlp.authority,       0.25),
-            "fear":           (nlp.fear,            0.20),
-            "urgency":        (nlp.urgency,         0.15),
-            "reward_scarcity":(nlp.reward_scarcity, 0.05),
+            "manipulation":   (nlp.manipulation,    1.20),
+            "authority":      (nlp.authority,       1.00),
+            "fear":           (nlp.fear,            1.00),
+            "urgency":        (nlp.urgency,         0.80),
+            "reward_scarcity":(nlp.reward_scarcity, 0.50),
         }
         score = score_from_signals(sw)
         evidence = build_evidence(nlp, "nlp", sw)

@@ -127,7 +127,8 @@ class BaseDetector(ABC):
         signals: list[str] | None = None,
     ) -> DetectionResult:
         """Convenience factory for a fully populated DetectionResult."""
-        confidence = round(min(0.95, score + 0.08), 3)
+        # Baseline confidence is 60%, scaling up to 95% based on signal strength
+        confidence = round(min(0.95, 0.60 + (score * 0.35)), 3)
         return DetectionResult(
             detector_id=self.detector_id,
             name=self.name,

@@ -6,19 +6,22 @@ Security properties enforced on every call:
   1. Scheme allowlist: only http and https.
   2. SSRF guard: host resolved to IPs; each IP checked against blocklist.
   3. Redirect safety: every redirect target is checked BEFORE following.
-  4. Timeout: configurable (default 10 s).
+  4. Timeout: configurable per-instance and per-call (default 10 s).
   5. Body size cap: reads at most MAX_BODY_BYTES bytes (default 10 MB).
   6. Redirect cap: max 5 hops (configurable).
   7. No cookies stored between requests.
   8. Custom User-Agent declared.
   9. No response caching.
  10. Redirect chain captured for Domain-2 redirect detectors.
+ 11. Supports GET and POST methods (for threat-intel APIs).
 
 Usage:
     fetcher = SafeFetcher()
     result = await fetcher.fetch("https://example.com")
-    print(result.redirect_chain)
-    print(result.body[:100])
+    result = await fetcher.fetch("https://api.example.com/lookup",
+                                  method="POST",
+                                  data={"url": "http://suspect.com"},
+                                  timeout=5.0)
 """
 
 from __future__ import annotations
@@ -56,6 +59,7 @@ class BodyTooLargeError(FetchError):
 # ── SafeFetcher ───────────────────────────────────────────────────────────────
 
 _ALLOWED_SCHEMES = {"http", "https"}
+_ALLOWED_METHODS = {"GET", "POST", "HEAD", "PUT", "DELETE", "PATCH"}
 
 
 class SafeFetcher:
@@ -103,11 +107,27 @@ class SafeFetcher:
 
     # ── Public API ────────────────────────────────────────────────────────────
 
-    async def fetch(self, url: str) -> FetchResult:
+    async def fetch(
+        self,
+        url: str,
+        *,
+        method: str = "GET",
+        data: dict | None = None,
+        json: dict | None = None,
+        headers: dict | None = None,
+        timeout: float | None = None,
+    ) -> FetchResult:
         """Fetch *url* safely, following redirects with SSRF re-checks.
 
         Args:
-            url: The target URL.  Must use http or https.
+            url:     The target URL.  Must use http or https.
+            method:  HTTP method (GET, POST, PUT, etc.).  Default: GET.
+            data:    Form-encoded body dict (for POST requests).
+            json:    JSON body dict (for POST requests).  Mutually exclusive
+                     with ``data``.
+            headers: Extra request headers merged with default headers.
+            timeout: Per-call timeout override in seconds.  Falls back to
+                     the instance-level ``timeout_seconds``.
 
         Returns:
             A FetchResult with body, status code, content-type, and the
@@ -119,10 +139,21 @@ class SafeFetcher:
                                    to a blocked IP range.
             TooManyRedirectsError: If the redirect chain exceeds the cap.
             FetchError:            For any other network/HTTP error.
+            ValueError:            If ``method`` is not in the allowed set.
         """
+        method = method.upper()
+        if method not in _ALLOWED_METHODS:
+            raise ValueError(
+                f"HTTP method {method!r} is not allowed. "
+                f"Permitted: {_ALLOWED_METHODS}"
+            )
+
         self._check_scheme(url)
         redirect_chain: list[str] = [url]
         current_url = url
+
+        # Build request timeout
+        req_timeout = httpx.Timeout(timeout if timeout is not None else self._timeout)
 
         for hop in range(self._max_redirects + 1):
             # SSRF check before every connection
@@ -136,10 +167,25 @@ class SafeFetcher:
             except SSRFError:
                 raise  # Re-raise as-is so callers can distinguish SSRF
 
-            logger.debug("SafeFetcher hop %d: %s", hop, current_url)
+            logger.debug("SafeFetcher %s hop %d: %s", method, hop, current_url)
 
             try:
-                response = await self._client.get(current_url)
+                # Only send body/data on the first hop; redirects always GET
+                is_first_hop = hop == 0
+                req_method = method if is_first_hop else "GET"
+                kwargs: dict = {
+                    "url": current_url,
+                    "timeout": req_timeout,
+                }
+                if headers:
+                    kwargs["headers"] = headers
+                if is_first_hop:
+                    if data is not None:
+                        kwargs["data"] = data
+                    if json is not None:
+                        kwargs["json"] = json
+
+                response = await self._client.request(req_method, **kwargs)
             except httpx.TimeoutException as exc:
                 raise FetchError(f"Request to {current_url!r} timed out: {exc}") from exc
             except httpx.RequestError as exc:

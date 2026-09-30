@@ -14,9 +14,13 @@ import logging
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 
 from app.core.config import settings
 from app.core.logging_config import configure_logging
+from app.core.rate_limit import limiter
 
 # ── Logging (must be first) ───────────────────────────────────────────────────
 configure_logging(settings.LOG_LEVEL)
@@ -39,11 +43,16 @@ app = FastAPI(
     openapi_url="/openapi.json",
 )
 
+# ── Rate Limiting ─────────────────────────────────────────────────────────────
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
+
 # ── CORS ─────────────────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow any frontend origin (Vercel, etc.)
-    allow_credentials=False, # Must be False when allow_origins is "*"
+    allow_origins=[origin.strip() for origin in settings.CORS_ORIGINS.split(",")] if settings.CORS_ORIGINS else [],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

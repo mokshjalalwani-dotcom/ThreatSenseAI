@@ -1,0 +1,1 @@
+http://secure-login-update-paypal-service.com/auth/verify.php

@@ -13,7 +13,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.aggregator.aggregator import RiskAggregator
 from app.core.config import settings
 from app.core.context import AnalysisContext
+from app.core.rate_limit import limiter
 from app.core.registry import get_all_detectors
+from app.core.security import verify_api_key
 from app.db.models import Analysis, DetectionResultDB
 from app.db.session import get_db
 from app.engines.nlp.engine import build_nlp_engine
@@ -149,6 +151,11 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
                 continue
             try:
                 result = await detector.detect(artifact, ctx)
+                failures = ctx.get_failures()
+                failed_required = [req for req in detector.required_engines if req in failures]
+                if failed_required:
+                    result.confidence = 0.0
+                    result.error = f"Engine failures: {', '.join(failed_required)}"
             except Exception as exc:
                 logger.exception("Detector %s raised unexpectedly", detector.detector_id)
                 result = DetectionResult(
@@ -166,6 +173,11 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
             detection_results.append(result)
 
         # ── Aggregation + explainability ─────────────────────────────────────
+        # M-2: Note D12 online-only chain detection in skipped components
+        import os
+        if str(os.environ.get("INTEL_OFFLINE", "true")).lower() == "true":
+            skipped.append("d12_chain_resolution_offline")
+
         engine_signals = ctx.get_engine_signals_snapshot()
         report = await _aggregator.aggregate(
             artifact=artifact,
@@ -220,9 +232,11 @@ async def _run_pipeline(artifact: Artifact, db: AsyncSession) -> RiskReport:
 
 
 @router.post("/analyze", response_model=RiskReport, tags=["Analysis"])
+@limiter.limit("30/minute")
 async def analyze(
     request: Request,
     db: AsyncSession = Depends(get_db),
+    api_key: str | None = Depends(verify_api_key),
 ) -> RiskReport:
     """Submit an artifact for threat analysis.
 
@@ -288,12 +302,14 @@ async def _analyze_upload(request: Request, db: AsyncSession) -> RiskReport:
     declared_mime = upload.content_type or "application/octet-stream"
 
     try:
-        validate_upload(
+        val_res = validate_upload(
             data=raw_bytes,
             original_filename=original_filename,
             declared_mime=declared_mime,
             artifact_type=artifact_type.value,
         )
+        from app.input.uploader import persist_upload
+        persist_upload(val_res, raw_bytes, settings.UPLOAD_DIR)
     except UploadValidationError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
@@ -316,9 +332,12 @@ async def _analyze_upload(request: Request, db: AsyncSession) -> RiskReport:
 
 
 @router.get("/analyses/{analysis_id}", response_model=RiskReport, tags=["Analysis"])
+@limiter.limit("100/minute")
 async def get_analysis(
+    request: Request,
     analysis_id: str,
     db: AsyncSession = Depends(get_db),
+    api_key: str | None = Depends(verify_api_key),
 ) -> RiskReport:
     """Retrieve a previously completed analysis by its ID."""
     result = await db.execute(select(Analysis).where(Analysis.id == analysis_id))

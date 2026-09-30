@@ -58,6 +58,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "dev-secret-key-change-in-production"
     API_KEY_HEADER: str = "X-API-Key"
     API_KEY: str = ""  # Empty = auth disabled (dev mode)
+    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:5173"
 
     # ── SafeFetcher ──────────────────────────────────────────────────────────
     SAFE_FETCHER_TIMEOUT_SECONDS: int = 10

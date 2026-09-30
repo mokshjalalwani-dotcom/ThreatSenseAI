@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from 'react'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
 
 const ARTIFACT_TYPES = [
   { id: 'url',     label: 'URL',     icon: '🔗', binary: false },

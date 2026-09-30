@@ -36,11 +36,7 @@ class QRPhishingDetector(BaseDetector):
     required_engines = ["media", "url"]
 
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
-        if not ctx._media_engine:
-            return self._result(artifact, 0.0, Verdict.SAFE, [],
-                                signals=["media.qr_decode"])
-
-        payloads = await ctx._media_engine.decode_qr(artifact)
+        payloads = await ctx.get_media_qr_payloads()
 
         if not payloads:
             return self._result(artifact, 0.0, Verdict.SAFE, [],

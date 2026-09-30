@@ -1,0 +1,5992 @@
+[
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.4813,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.425,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.5188,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.2125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.1062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.225,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.1187,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0812,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1313,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.2125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0812,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.2437,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.1187,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d01_email_phishing",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.2125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.1625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.175,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.2375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.1625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d02_social_engineering",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.3938,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.375,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.5062,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0938,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.35,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.1562,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0688,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0688,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0688,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.2062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.1562,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d03_spear_phishing",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.1875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0437,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1062,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0938,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.2812,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.2625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0437,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.425,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d04_scam_fraud",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.4875,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.175,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.1,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d05_smishing",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.2,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.1125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.375,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.1,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d06_government_scams",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.625,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.1875,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.25,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d07_financial_investment",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.225,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.15,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.175,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.2,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d08_recruitment_scams",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.1125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.5125,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.025,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d09_tech_support_scams",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.945,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.945,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.9458,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.945,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9423,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.9441,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9392,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9385,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.9457,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.9416,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.9454,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.9474,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.942,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.9463,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9354,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.9483,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9354,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.9297,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.9512,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.8925,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.9244,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0922,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0994,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0965,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0896,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1577,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.9062,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.103,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.1001,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0894,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.7881,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.5166,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0954,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1342,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.1302,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.9483,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9477,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.948,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.9454,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d10_malicious_url",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.9455,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.7,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.6588,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.8,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.6462,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.6364,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d11_brand_impersonation",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.54,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.4,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.4,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.45,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d12_malicious_redirects",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.65,
+    "verdict": "likely_malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d13_url_obfuscation",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.75,
+    "verdict": "malicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.5,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.5,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d14_idn_homograph",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.25,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.25,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d15_credential_harvesting",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.125,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d16_fake_auth_pages",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1859,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1902,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1785,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_mal_4",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1849,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_border_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_border_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d10_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d11_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d11_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1812,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d11_mal_3",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d11_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d11_benign_2",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d12_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1576,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d12_mal_2",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.1033,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d12_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d14_mal_1",
+    "artifact_type": "url",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d17_malicious_webpages",
+    "fixture_id": "d14_benign_1",
+    "artifact_type": "url",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0375,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.075,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d18_bec",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_mal_3",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_mal_4",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_border_2",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d06_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d06_mal_2",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d06_benign_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d07_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.0625,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.175,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d09_mal_1",
+    "artifact_type": "sms",
+    "expected_malicious": true,
+    "score": 0.05,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.35,
+    "verdict": "suspicious",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d19_spam",
+    "fixture_id": "neg_1",
+    "artifact_type": "sms",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d01_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d01_mal_2",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d01_border_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d01_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d01_benign_2",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d07_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d08_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d08_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d09_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d18_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d18_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d19_mal_1",
+    "artifact_type": "email",
+    "expected_malicious": true,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "FAIL"
+  },
+  {
+    "detector_id": "d20_suspicious_attachments",
+    "fixture_id": "d19_benign_1",
+    "artifact_type": "email",
+    "expected_malicious": false,
+    "score": 0.0,
+    "verdict": "safe",
+    "ran": true,
+    "status": "PASS"
+  }
+]

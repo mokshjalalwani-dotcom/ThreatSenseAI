@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square&logo=python)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev)
-[![Tests](https://img.shields.io/badge/Tests-396%20passing-22c55e?style=flat-square&logo=pytest)](./backend/tests)
+[![Tests](https://img.shields.io/badge/Tests-398%20passing-22c55e?style=flat-square&logo=pytest)](./backend/tests)
 [![Detectors](https://img.shields.io/badge/Detectors-22-6366f1?style=flat-square)](./backend/app/detectors)
 [![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](./LICENSE)
 
@@ -123,7 +123,7 @@ ThreatSenseAI/
 │   │   ├── aggregator/        # Noisy-OR risk scorer
 │   │   └── explain/           # Human-readable report builder
 │   ├── alembic/               # DB migrations
-│   ├── tests/                 # 396 pytest tests
+│   ├── tests/                 # 398 pytest tests
 │   └── Dockerfile
 ├── frontend/                  # React + Vite dashboard
 │   └── src/
@@ -168,6 +168,7 @@ cd backend
 pip install -e .
 uvicorn app.main:app --reload --port 8000
 ```
+> **Note**: If authentication is enabled, you may need to pass an `API_KEY` environment variable.
 API docs: **http://localhost:8000/docs**
 
 ### Frontend
@@ -214,7 +215,7 @@ Render builds the Docker container, installs all dependencies (including Tessera
 ```bash
 cd backend
 pytest tests/ -q --tb=short
-# 396 passed in ~7s
+# 398 passed in ~7s
 ```
 
 Test coverage spans all 22 detectors, all 5 engines, the aggregator, explainer, API routes, URL normalizers, and safe-fetcher.

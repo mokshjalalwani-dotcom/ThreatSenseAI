@@ -23,7 +23,7 @@ def upgrade() -> None:
     op.create_table(
         "analyses",
         sa.Column("id", sa.String(36), primary_key=True),
-        sa.Column("artifact_id", sa.String(36), nullable=False, index=True),
+        sa.Column("artifact_id", sa.String(36), nullable=False),
         sa.Column("artifact_type", sa.String(20), nullable=False),
         sa.Column("status", sa.String(20), nullable=False, server_default="pending"),
         sa.Column("risk_score", sa.Float(), nullable=True),

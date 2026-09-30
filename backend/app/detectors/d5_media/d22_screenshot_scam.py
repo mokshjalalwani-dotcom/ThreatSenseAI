@@ -31,11 +31,8 @@ class ScreenshotScamDetector(BaseDetector):
     required_engines = ["media", "nlp"]
 
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
-        if not ctx._media_engine:
-            return self._result(artifact, 0.0, Verdict.SAFE, [], signals=["media.ocr"])
-
         # Extract text via OCR
-        ocr_text = await ctx._media_engine.extract_text_ocr(artifact)
+        ocr_text = await ctx.get_media_ocr_text()
 
         if not ocr_text.strip():
             return self._result(artifact, 0.0, Verdict.SAFE,

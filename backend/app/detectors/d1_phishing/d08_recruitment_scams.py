@@ -31,11 +31,11 @@ class RecruitmentScamDetector(BaseDetector):
     async def detect(self, artifact: Artifact, ctx: AnalysisContext) -> DetectionResult:
         nlp = await ctx.get_nlp_signals()
         sw = {
-            "recruitment_context": (nlp.recruitment_context, 0.40),
-            "reward_scarcity":     (nlp.reward_scarcity,     0.20),
-            "financial_intent":    (nlp.financial_intent,    0.20),
-            "manipulation":        (nlp.manipulation,        0.10),
-            "payment_request":     (nlp.payment_request,     0.10),
+            "recruitment_context": (nlp.recruitment_context, 1.50),
+            "reward_scarcity":     (nlp.reward_scarcity,     0.80),
+            "financial_intent":    (nlp.financial_intent,    0.80),
+            "manipulation":        (nlp.manipulation,        0.50),
+            "payment_request":     (nlp.payment_request,     1.00),
         }
         score = score_from_signals(sw)
         evidence = build_evidence(nlp, "nlp", sw)
