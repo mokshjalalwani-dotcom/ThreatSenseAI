@@ -18,9 +18,9 @@ services:
         value: "false"
       - key: INTEL_OFFLINE
         value: "false"
-      # Allow requests from the deployed frontend static site
+      # Allow requests from any origin in production to avoid Render URL mismatch
       - key: CORS_ORIGINS
-        value: "https://threatsense-ui.onrender.com,http://localhost:5173,http://127.0.0.1:5173"
+        value: "*"
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
 
   # ── Frontend Static Site ───────────────────────────────────────────────────

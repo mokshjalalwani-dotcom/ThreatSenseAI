@@ -192,7 +192,15 @@ export default function App() {
       const data = await resp.json()
       setReport(data)
     } catch (err) {
-      setError(err.message)
+      if (err.message.includes('Failed to fetch')) {
+        setError(
+          `Network Error: Could not connect to API at ${API_BASE}.\n\n` +
+          `• If running locally: ensure the backend is running via 'uvicorn app.main:app --reload'.\n` +
+          `• If deployed on Render: your backend URL might be different from the default. Check your Render Dashboard for the backend Web Service URL and set it as VITE_API_URL in the frontend Static Site environment variables.`
+        )
+      } else {
+        setError(err.message)
+      }
     } finally {
       setLoading(false)
     }
@@ -311,11 +319,8 @@ export default function App() {
         {/* ── Right panel: results ── */}
         <div className="panel-right">
           {error && (
-            <div className="error-box">
-              ⚠️ <strong>Analysis failed:</strong> {error}
-              <div style={{ marginTop: 6, fontSize: 11, opacity: 0.8 }}>
-                Make sure the backend is running: <code>uvicorn app.main:app --reload</code>
-              </div>
+            <div className="error-box" style={{ whiteSpace: 'pre-wrap' }}>
+              ⚠️ <strong>Analysis failed:</strong><br />{error}
             </div>
           )}
 
