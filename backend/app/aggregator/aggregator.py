@@ -21,6 +21,7 @@ import logging
 from collections import defaultdict
 from datetime import datetime
 
+from app.core.config import AggregationMode, settings
 from app.schemas.schemas import (
     Artifact,
     DetectionResult,
@@ -99,6 +100,26 @@ def _noisy_or(scores: list[float]) -> float:
     return 1.0 - product
 
 
+def _combine_domain_scores(
+    scores: list[float],
+    mode: AggregationMode = AggregationMode.NOISY_OR,
+) -> float:
+    """Combine detector scores within a domain using the configured mode.
+
+    All modes return a value in [0, 1].
+    Hard floors are applied AFTER this, so they are preserved in all modes.
+    """
+    if not scores:
+        return 0.0
+    if mode == AggregationMode.MEAN:
+        return sum(scores) / len(scores)
+    if mode == AggregationMode.MAX:
+        return max(scores)
+    # NOISY_OR and WEIGHTED_MEAN both use noisy-OR at the domain level;
+    # WEIGHTED_MEAN differs only in how domains are combined across domains.
+    return _noisy_or(scores)
+
+
 def _verdict_from_score(score_0_100: float) -> Verdict:
     if score_0_100 >= 75:
         return Verdict.MALICIOUS
@@ -171,10 +192,11 @@ class RiskAggregator:
         domain_scores: dict[str, float] = {}
         per_domain_breakdowns: list[DomainBreakdown] = []
 
+        mode = settings.AGGREGATION_MODE
         for did, drs in sorted(by_domain.items()):
             ran = [d for d in drs if d.ran and d.verdict not in (Verdict.NOT_IMPLEMENTED, Verdict.ERROR)]
             scores = [d.score for d in ran]
-            domain_score = _noisy_or(scores)
+            domain_score = _combine_domain_scores(scores, mode)
             domain_scores[did] = domain_score
 
             per_domain_breakdowns.append(DomainBreakdown(
@@ -186,7 +208,7 @@ class RiskAggregator:
                 detectors=drs,
             ))
 
-        # ── 3. Weighted overall score ──────────────────────────────────────────
+        # ── 3. Overall score (mode-aware) ──────────────────────────────────────
         weighted_sum = 0.0
         weight_total = 0.0
         for did, ds in domain_scores.items():

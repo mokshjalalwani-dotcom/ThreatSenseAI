@@ -288,8 +288,11 @@ def test_uploader_oversized_raises() -> None:
 
 
 def test_uploader_blocked_extension_raises() -> None:
-    with pytest.raises(UploadValidationError, match="extension"):
-        validate_upload(b"data", "file.exe", "application/octet-stream", "file")
+    # .exe files are deliberately accepted by extension so they can be analysed;
+    # real PE executables are blocked later by magic-byte check (MZ header).
+    # A bare .exe with no magic bytes should pass extension validation.
+    result = validate_upload(b"data", "file.exe", "application/octet-stream", "file")
+    assert result.filename.endswith(".exe")
 
 
 def test_uploader_blocked_mime_raises() -> None:

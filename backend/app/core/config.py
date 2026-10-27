@@ -22,6 +22,21 @@ class NLPBackend(StrEnum):
     ENSEMBLE = "ensemble"
 
 
+class AggregationMode(StrEnum):
+    """Aggregation strategies for Phase B ablation (PDF §6.3).
+
+    noisy_or     — default; 1-∏(1-sᵢ) per domain, then weighted sum.
+    mean         — simple arithmetic mean of all ran detector scores.
+    max          — max of all ran detector scores (pessimistic).
+    weighted_mean— domain-weighted average (same weights, no noisy-OR).
+    """
+
+    NOISY_OR      = "noisy_or"
+    MEAN          = "mean"
+    MAX           = "max"
+    WEIGHTED_MEAN = "weighted_mean"
+
+
 class Settings(BaseSettings):
     """Platform-wide settings, loaded from env / .env file."""
 
@@ -53,6 +68,19 @@ class Settings(BaseSettings):
             "'finetuned' raises NotImplementedError until Stage 13."
         ),
     )
+
+    # ── Aggregation (Phase B — PDF §6.3) ─────────────────────────────────────
+    AGGREGATION_MODE: AggregationMode = Field(
+        default=AggregationMode.NOISY_OR,
+        description=(
+            "How domain-level scores are combined: "
+            "noisy_or (default) | mean | max | weighted_mean. "
+            "Hard floors (intel=0.80, CRITICAL=0.70) are preserved in every mode."
+        ),
+    )
+    # Grey band for optional LLM arbiter (Phase C). Score inside band triggers arbiter.
+    AGGREGATION_GREY_LOW: float = Field(default=0.35, description="Grey band lower bound.")
+    AGGREGATION_GREY_HIGH: float = Field(default=0.65, description="Grey band upper bound.")
 
     # ── Security ─────────────────────────────────────────────────────────────
     SECRET_KEY: str = "dev-secret-key-change-in-production"
